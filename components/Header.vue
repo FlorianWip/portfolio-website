@@ -14,7 +14,9 @@ const scrollY = useState('scroll-y')
       <NuxtLink href="/#projects" class="hover:text-gray-100 hover:scale-110 cursor-pointer">
         .projects
       </NuxtLink>
-      <span class="hover:text-gray-100 hover:scale-110 cursor-pointer">.contact</span>
+      <NuxtLink href="/#contact" class="hover:text-gray-100 hover:scale-110 cursor-pointer">
+        .contact
+      </NuxtLink>
     </div>
     <a href="https://dashboard.flammenfuchs.de" target="blank">
       <div class="fixed right-6 top-2 text-3xl w-8 mt-auto hover:scale-110 hover:text-gray-100">

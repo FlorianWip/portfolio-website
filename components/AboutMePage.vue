@@ -36,7 +36,7 @@ const years = time.getUTCFullYear() - 1970
           <SkillsItem icon-name="devicon:mysql" skill="MySQL" />
           <SkillsItem icon-name="devicon:mariadb" skill="MariaDB" />
           <SkillsItem icon-name="devicon:git" skill="Git" />
-          <SkillsItem icon-name="devicon:github" skill="GitHub" />
+          <SkillsItem icon-name="skill-icons:github-light" skill="GitHub" />
           <SkillsItem icon-name="devicon:docker" skill="Docker" />
           <SkillsItem icon-name="devicon:maven" skill="Maven" />
           <SkillsItem icon-name="devicon:gradle" skill="Gradle" />

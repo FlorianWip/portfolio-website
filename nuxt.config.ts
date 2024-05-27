@@ -8,5 +8,8 @@ export default defineNuxtConfig({
   ],
   typescript: {
     shim: false
+  },
+  naiveui: {
+    colorModePreference: 'dark'
   }
 })

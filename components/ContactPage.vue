@@ -1,44 +1,42 @@
 <script setup lang="ts">
+import { useState } from '#app'
+
+const loading = useState(() => false)
+loading.value = false
+
+const name: string = ''
+const mail: string = ''
+const message: string = ''
+
+async function handleClick() {
+  loading.value = true
+}
 </script>
 
 <template>
-  <div id="contact" class="flex flex-col text-white py-36 w-screen">
-    <div class="flex flex-col mx-auto w-2/3" data-aos="fade-right">
-      <span class="font-bold text-3xl mb-6">Contact me</span>
-      <div class="flex w-full">
-        <div>
-          <div class="border w-12 mt-3.5 border-orange-400" />
-        </div>
-        <div class="pl-8 text-xl text-gray-300">
-          I am always open for new projects and challenges. If you have any questions or want to work with me, feel free to contact me.
-          I love to contribute to projects to earn more experience and expand my portfolio.
-        </div>
+  <div id="contact" class="flex text-white py-36 w-screen">
+    <div class="flex flex-row w-2/3 mx-auto">
+      <div class="w-2/3">
+        <span>t</span>
       </div>
-    </div>
-    <div class="flex flex-col mx-auto w-2/3 mt-16" data-aos="fade-left">
-      <div class="flex w-full">
-        <div class="flex flex-wrap gap-4 mx-auto w-full justify-center">
-          <SkillsItem icon-name="devicon:java" skill="Java" />
-          <SkillsItem icon-name="devicon:csharp" skill="C#" />
-          <SkillsItem icon-name="devicon:go" skill="GoLang" />
-          <SkillsItem icon-name="logos:nuxt-icon" skill="Nuxt 3" />
-          <SkillsItem icon-name="devicon:nextjs" skill="Next 12" />
-          <SkillsItem icon-name="devicon:tailwindcss" skill="Tailwind" />
-          <SkillsItem icon-name="devicon:quarkus" skill="Quarkus" />
-          <SkillsItem icon-name="devicon:redis" skill="Redis" />
-          <SkillsItem icon-name="devicon:mongodb" skill="MongoDB" />
-          <SkillsItem icon-name="devicon:mysql" skill="MySQL" />
-          <SkillsItem icon-name="devicon:mariadb" skill="MariaDB" />
-          <SkillsItem icon-name="devicon:git" skill="Git" />
-          <SkillsItem icon-name="devicon:github" skill="GitHub" />
-          <SkillsItem icon-name="devicon:docker" skill="Docker" />
-          <SkillsItem icon-name="devicon:maven" skill="Maven" />
-          <SkillsItem icon-name="devicon:gradle" skill="Gradle" />
-          <SkillsItem icon-name="devicon:jetbrains" skill="IDEs" />
-          <SkillsItem icon-name="simple-icons:wails" skill="WailsJS" />
-          <SkillsItem icon-name="devicon:typescript" skill="TypeScript" />
-          <SkillsItem icon-name="logos:drone-icon" skill="Drone" />
-        </div>
+      <div class="w-1/3 bg-gray-400/10 rounded p-3">
+        <form class="flex flex-col gap-2 text-lg text-gray-400">
+          <span class="mx-auto">Your Mail</span>
+          <n-skeleton v-if="loading" class="my-2" />
+          <n-input v-else :input-props="{ type: 'email' }" name="mail" placeholder="john.doe@example.com" :on-change="val => mail = val" />
+          <span class="mx-auto">Your Name</span>
+          <n-skeleton v-if="loading" class="my-2" />
+          <n-input v-else type="text" name="name" placeholder="John Doe" :on-change="val => name = val" />
+          <span class="mx-auto">Your Message</span>
+          <n-skeleton v-if="loading" class="mt-1.5" :repeat="4" />
+          <n-input
+            v-else type="textarea" name="name" rows="5" show-count :resizable="false" :on-change="val => message = val"
+            placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At"
+          />
+          <n-button round type="warning" ghost class="mt-1" @click="handleClick">
+            <span class="text-gray-200 font-semibold text-xs uppercase px-1">Send</span>
+          </n-button>
+        </form>
       </div>
     </div>
   </div>

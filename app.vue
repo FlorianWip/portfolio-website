@@ -1,6 +1,11 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <naive-config>
-    <NuxtPage />
+    <n-message-provider>
+      <NuxtPage />
+    </n-message-provider>
   </naive-config>
 </template>
 

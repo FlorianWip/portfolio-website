@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node .output/server/index.mjs",
+    "start": "node .output/server/index.mjs",
     "typecheck": "nuxt typecheck",
     "lint:fix": "eslint . --fix",
     "lint": "oxlint --deny-warnings -D correctness -D suspicious -D perf && eslint --max-warnings 0 .",

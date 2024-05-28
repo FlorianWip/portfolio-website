@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { $fetch, FetchError } from 'ofetch'
+import { FetchError } from 'ofetch'
 
 const feedback = useMessage()
 
@@ -9,15 +9,10 @@ const name = ref<string>('')
 const mail = ref<string>('')
 const message = ref<string>('')
 
+const { postContactRequest } = useApi()
+
 async function handleClick() {
-  $fetch('http://localhost:8080/contactrequests', {
-    timeout: 1000,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ name: name.value, mail: mail.value, message: message.value })
-  }).then(() => {
+  postContactRequest(name.value, mail.value, message.value).then(() => {
     feedback.info('Message sent successfully!')
   }).catch((err) => {
     if (err) {

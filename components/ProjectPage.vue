@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const request = await useFetch<Project[]>('http://localhost:8080/projects')
-const projects = request.data.value
+const { getProjects } = useApi()
+const projects = await getProjects()
 </script>
 
 <template>

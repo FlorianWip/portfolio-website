@@ -97,10 +97,3 @@ async function handleClick() {
     </div>
   </div>
 </template>
-
-<style scoped>
-.radial-gradient {
-  background: rgb(26,25,33);
-  background: radial-gradient(circle, rgba(26,25,33,0.1) 0%, rgba(48,48,62,0.1) 47%, rgba(0,212,255,0.1) 100%);
-}
-</style>

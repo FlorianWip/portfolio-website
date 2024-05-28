@@ -21,7 +21,3 @@ const even = props.index % 2 === 0
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

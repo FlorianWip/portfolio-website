@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onBeforeMount } from 'vue'
-
 const scrollY = useState('scroll-y', () => 0)
 const windowWidth = useState('window-width', () => 0)
 
@@ -31,7 +29,7 @@ onBeforeMount(() => {
 .bg-image {
   position: absolute;
   overflow: hidden;
-  background-image: url('../public/test.png');
+  background-image: url('/grid.png');
   background-position: center;
   background-repeat: repeat;
   scale: 400%;

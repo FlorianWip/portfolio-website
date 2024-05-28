@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div className="flex flex-col space-y-2">
     <span>Angaben gem&auml;&szlig; &sect; 5 TMG</span>
@@ -442,7 +438,3 @@
     </p>
   </div>
 </template>
-
-<style scoped>
-
-</style>

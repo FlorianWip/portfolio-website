@@ -3,7 +3,7 @@
 
 <template>
   <naive-config>
-    <n-message-provider>
+    <n-message-provider placement="bottom-right">
       <NuxtPage />
     </n-message-provider>
   </naive-config>

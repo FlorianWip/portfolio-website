@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from 'vite-svg-loader'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -11,5 +13,8 @@ export default defineNuxtConfig({
   },
   naiveui: {
     colorModePreference: 'dark'
+  },
+  vite: {
+    plugins: [svgLoader()]
   }
 })

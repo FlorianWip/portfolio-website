@@ -7,6 +7,13 @@ This is a [sidebase merino](https://sidebase.io/) app created by running `npm cr
 - Naive UI
 - Linting via ESLint and @antfu/eslint-config
 
+## Set Backend Base URL
+1. Create a `.env` file in the root of the project
+2. Add the following line to the `.env` file:
+```
+NUXT_PUBLIC_API_BASE_URL='http://example.com/api'=
+```
+
 ### Setup
 
 Make sure to install the dependencies:

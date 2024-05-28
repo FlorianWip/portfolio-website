@@ -2,14 +2,16 @@
 import { onBeforeMount } from 'vue'
 
 const scrollY = useState('scroll-y', () => 0)
+const windowWidth = useState('window-width', () => 0)
 
 onBeforeMount(() => {
   window.addEventListener('scroll', () => scrollY.value = window.scrollY)
+  windowWidth.value = window.innerWidth
 })
 </script>
 
 <template>
-  <div class="scroll-smooth">
+  <div class="scroll-smooth overflow-hidden">
     <div class="fixed top-0 right-0 h-screen w-screen bg-slate-950 -z-20 overflow-hidden">
       <div class="fixed top-0 right-0 h-screen w-screen radial-gradient -z-20 overflow-hidden" />
       <div class="h-full w-full bg-image -z-10" />

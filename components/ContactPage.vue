@@ -9,12 +9,6 @@ const name = ref<string>('')
 const mail = ref<string>('')
 const message = ref<string>('')
 
-// const data = reactive<{ name: string, mail: string, message: string }>({
-//   name: '',
-//   mail: '',
-//   message: ''
-// })
-
 async function handleClick() {
   $fetch('http://localhost:8080/contactrequests', {
     timeout: 1000,
@@ -68,10 +62,10 @@ async function handleClick() {
 </script>
 
 <template>
-  <div id="contact" class="relative text-white h-96 w-screen my-36 overflow-x-clip">
-    <div class="absolute right-0 top-0 h-full w-full bg-gray-400/10 rotate-3 scale-150" />
-    <div class="flex flex-row w-2/3 mx-auto">
-      <div class="flex flex-col justify-between w-1/2 px-4 py-3" data-aos="fade-right">
+  <div id="contact" class="relative text-white xl:h-96 w-screen my-16 xl:my-36 overflow-x-clip">
+    <div class="hidden xl:block absolute right-0 top-0 h-full w-full bg-gray-400/10 rotate-3 scale-150" />
+    <div class="flex flex-col xl:flex-row w-4/5 xl:w-2/3 mx-auto">
+      <div class="flex flex-col justify-between w-full xl:w-1/2 px-4 py-3" data-aos="fade-right">
         <span class="text-gray-400 text-3xl font-extrabold mx-auto">Florian Wippert</span>
         <span class="text-gray-400 text-xl font-bold mx-auto">Software Developer</span>
         <img src="https://github.com/FlorianWip.png" class="rounded-full w-40 h-40 mx-auto mt-4">
@@ -87,9 +81,9 @@ async function handleClick() {
           </a>
         </div>
       </div>
-      <div class="flex flex-col w-1/2 px-4 py-3 justify-between" data-aos="fade-left">
+      <div class="flex flex-col w-full xl:w-1/2 px-4 py-3 justify-between mt-4 xl:mt-0" data-aos="fade-left">
         <span class="text-gray-400 text-2xl font-extrabold mx-auto">Contact Me</span>
-        <form class="flex flex-col px-12 gap-4">
+        <form class="flex flex-col xl:px-12 gap-4">
           <n-input v-model:value="name" placeholder="Name..." class="mt-4" />
           <n-input v-model:value="mail" placeholder="Mail..." class="mt-4" />
           <n-input v-model:value="message" placeholder="Message..." type="textarea" class="mt-4" :resizable="false" :rows="5" />

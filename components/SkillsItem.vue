@@ -7,6 +7,11 @@ defineProps({
   iconName: {
     type: String,
     required: true
+  },
+  textSize: {
+    type: String,
+    default: 'text-lg',
+    required: false
   }
 })
 </script>
@@ -16,8 +21,8 @@ defineProps({
     <div class="mx-auto">
       <Icon :name="iconName" class="text-3xl mx-auto" />
     </div>
-    <div class="hidden xl:block mx-auto text-gray-400 mt-2">
-      <span class="text-lg font-bold mx-auto">{{ skill }}</span>
+    <div class="hidden xl:block mx-auto text-center text-gray-400 mt-2">
+      <span :class="`font-bold ${textSize}`">{{ skill }}</span>
     </div>
   </div>
 </template>

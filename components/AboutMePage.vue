@@ -43,7 +43,7 @@ const years = time.getUTCFullYear() - 1970
           <SkillsItem icon-name="devicon:jetbrains" skill="IDEs" />
           <SkillsItem icon-name="simple-icons:wails" skill="WailsJS" />
           <SkillsItem icon-name="devicon:typescript" skill="TypeScript" />
-          <SkillsItem icon-name="logos:drone-icon" skill="Drone" />
+          <SkillsItem icon-name="devicon:githubactions" skill="GH Actions" text-size="text-sm" />
         </div>
       </div>
     </div>

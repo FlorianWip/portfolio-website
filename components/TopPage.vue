@@ -13,11 +13,11 @@ const years = time.getUTCFullYear() - 1970
         <div class="flex flex-col justify-center h-full">
           <span class="text-white text-5xl text-center xl:text-left">Hello my name is<br> <span class="text-red-500 font-bold">Florian</span></span>
           <p class="text-gray-300 text-xl mt-5 xl:text-left text-justify">
-            I am Florian and I am {{ years }} years old. I am currently studying computer science and I live in Saxony
+            I am Florian and I am {{ years }} years old. I live in Saxony
             in Germany.
             I am a passionate developer and I love to work with new technologies. I would describe me as a open minded
             person who is always looking for new challenges.
-            I am a full-stack developer but I like Java most.
+            I am a full-stack developer but I like Kotlin most.
           </p>
           <div class="mx-auto xl:mx-0 mt-8">
             <NuxtLink href="/#about">

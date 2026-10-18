@@ -13,7 +13,7 @@ const years = time.getUTCFullYear() - 1970
           <div class="border w-12 mt-3.5 border-orange-400" />
         </div>
         <div class="xl:pl-8 text-xl text-gray-300 break-words">
-          My name is Florian and I am {{ years }} years old. I am currently studying computer science and I live in Saxony (Germany).
+          My name is Florian and I am {{ years }} years old. I live in Saxony (Germany).
           I love to work with a computer. Since my early teenage years I have been interested in programming and I have been programming since then.
           It started with simple Minecraft Plugins and in the years I have learned more and more things. I am searching for new challenges and I am
           always open for new things.

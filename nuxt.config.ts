@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@bg-dev/nuxt-naiveui',
     'nuxt-aos',
-    'nuxt-icon'
+    '@nuxt/icon'
   ],
   typescript: {
     shim: false

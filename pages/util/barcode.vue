@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const content = ref<string>('')
+const content = ref('')
+const contentNumber = ref(0)
+const numberMode = ref(false)
 </script>
 
 <template>
@@ -14,12 +16,20 @@ const content = ref<string>('')
     <Header />
     <div class="flex flex-col w-full xl:w-1/2 px-4 py-3 justify-between mt-24 mx-auto" data-aos="fade-left">
       <span class="text-gray-400 text-2xl font-extrabold mx-auto">Barcode Generator</span>
-      <span class="text-gray-400 text-8xl font-extrabold mx-auto libre-barcode-128-regular">{{ content }}</span>
-      <form class="flex flex-col xl:px-24">
+      <div :class="numberMode ? 'hidden' : 'block'" class="flex flex-col xl:px-24">
+        <span class="text-gray-400 text-8xl font-extrabold mx-auto libre-barcode-128-regular">{{ content }}</span>
         <n-input v-model:value="content" placeholder="Barcode Inhalt..." class="mt-4" />
-      </form>
+      </div>
+      <div :class="numberMode ? 'block' : 'hidden'" class="flex flex-col xl:px-24">
+        <span :class="(contentNumber === 0) ? 'hidden' : ''" class="text-gray-400 text-8xl font-extrabold mx-auto libre-barcode-128-regular">{{ contentNumber }}</span>
+        <n-input-number v-model:value="contentNumber" :clearable="true" placeholder="Barcode Inhalt..." class="mt-4" />
+      </div>
+      <div class="flex flex-row gap-4 xl:px-24">
+        <n-switch v-model:value="numberMode" :on-change="() => { content = ''; contentNumber = 0; }" placeholder="Barcode Inhalt..." class="mt-4" />
+        <span class="text-gray-400 text-xl py-3">Number Mode</span>
+      </div>
     </div>
-    <div class=" absolute bottom-0">
+    <div class="absolute bottom-0">
       <Footer />
     </div>
   </div>

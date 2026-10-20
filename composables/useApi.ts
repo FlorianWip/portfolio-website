@@ -10,7 +10,7 @@ async function getProjects() {
 }
 
 async function postContactRequest(name: string, mail: string, message: string) {
-  return $fetch('http://localhost:8080/contactrequests', {
+  return $fetch(`${getBaseUrl()}/contactrequests`, {
     timeout: 1000,
     method: 'POST',
     headers: {
